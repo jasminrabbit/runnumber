@@ -1,0 +1,53 @@
+#EXTM3U
+
+
+#EXTINF:-1  tvg-logo="https://overseer.blackboxsys.net/images/png/hd-history.png" ,History 
+https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine101.m3u8
+
+#EXTINF:-1  tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//Discovery.png",Discovery
+https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine102.m3u8
+
+#EXTINF:-1  tvg-logo="https://facedumonde.fr/wp-content/uploads/2023/04/DiscoveryAsia.png" ,Discovery Asia
+https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine103.m3u8
+
+#EXTINF:-1  tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon///AnimalShow.png" ,AnimalShow
+https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine104.m3u8
+
+#EXTINF:-1 tvg-logo="https://cms.dmpcdn.com/livetv/2024/01/16/ca686ee0-b44c-11ee-9f05-591527f02603_webp_original.webp" ,True explore-wild
+https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine105.m3u8
+
+#EXTINF:-1 tvg-logo="https://cms.dmpcdn.com/livetv/2024/01/16/c9f16a20-b44c-11ee-8e80-c3f417d0d932_webp_original.webp" ,True explore-sci
+https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine106.m3u8
+
+#EXTINF:-1 tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon///Thainess.png" ,Thainess
+https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine107.m3u8
+
+#EXTINF:-1 tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon///SamRujLok.png" ,สำรวจโลก
+https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine108.m3u8
+
+#EXTINF:-1 tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/0162.png" , Food Network
+https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine109.m3u8
+
+#EXTINF:-1 tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon//R3_0161.png" ,afn
+https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine110.m3u8
+
+#EXTINF:-1 tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//TLC.png" ,TLC
+https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine111.m3u8
+
+#EXTINF:-1 tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/Boomerang2024.png" ,Boomerang
+https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine601.m3u8
+
+#EXTINF:-1 tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE///channelicon//0171.png" ,Cartoon Network
+https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine602.m3u8
+
+#EXTINF:-1 tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//Cartoonito.png" ,Cartoonito
+https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine603.m3u8
+
+#EXTINF:-1 tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/Nickjr_2024.png" ,Nick Jr. 
+https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine604.m3u8
+
+#EXTINF:-1 tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/LOGO_Nickelodeon2.png" ,Nickelodeon
+https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine605.m3u8
+
+
+
