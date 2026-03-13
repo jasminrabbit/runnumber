@@ -49,5 +49,13 @@ https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine
 #EXTINF:-1 tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/LOGO_Nickelodeon2.png" ,Nickelodeon
 https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine605.m3u8
 
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/2019_Disney_Channel_logo.svg/320px-2019_Disney_Channel_logo.svg.png",DISNEY CHANNEL
+https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine606.m3u8
+
+#EXTINF:-1 tvg-logo="https://i.pinimg.com/originals/7e/24/ca/7e24ca4a5925f9be04da4855702e5099.jpg",DISNEY JUNIOR
+https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine607.m3u8
+
+#EXTINF:-1 tvg-logo="https://vectorseek.com/wp-content/uploads/2023/05/Disney-XD-channel-Logo-Vector.jpg",DISNEY XD
+https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine608.m3u8
 
 
