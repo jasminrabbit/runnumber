@@ -2,60 +2,60 @@
 
 
 #EXTINF:-1  tvg-logo="https://overseer.blackboxsys.net/images/png/hd-history.png" ,History 
-https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine101.m3u8
+https://floral-night-e2a4.dookeela.workers.dev/edge/history/chunks.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9My8xMi8yMDI2LCAyOjQ2OjI0IEFNJmhhc2hfdmFsdWU9T2k3WWtTMUZacFVEalpOemJxOGNwdz09JnZhbGlkbWludXRlcz0xJmlkPWM0N2U0YTZkMzk0NTEyZDk5MTE3ZWE0YTdlZTc4OTk0JmNoZWNraXA9dHJ1ZSZzdHJtX2xlbj0xNw==
 
 #EXTINF:-1  tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//Discovery.png",Discovery
-https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine102.m3u8
+https://floral-night-e2a4.dookeela.workers.dev/edge/discovery/chunks.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9My8xMi8yMDI2LCAyOjQ2OjI0IEFNJmhhc2hfdmFsdWU9T2k3WWtTMUZacFVEalpOemJxOGNwdz09JnZhbGlkbWludXRlcz0xJmlkPWM0N2U0YTZkMzk0NTEyZDk5MTE3ZWE0YTdlZTc4OTk0JmNoZWNraXA9dHJ1ZSZzdHJtX2xlbj0xNw==
 
 #EXTINF:-1  tvg-logo="https://facedumonde.fr/wp-content/uploads/2023/04/DiscoveryAsia.png" ,Discovery Asia
-https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine103.m3u8
+https://floral-night-e2a4.dookeela.workers.dev/edge/discovery-asia/chunks.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9My8xMi8yMDI2LCAyOjQ2OjI0IEFNJmhhc2hfdmFsdWU9T2k3WWtTMUZacFVEalpOemJxOGNwdz09JnZhbGlkbWludXRlcz0xJmlkPWM0N2U0YTZkMzk0NTEyZDk5MTE3ZWE0YTdlZTc4OTk0JmNoZWNraXA9dHJ1ZSZzdHJtX2xlbj0xNw==
 
 #EXTINF:-1  tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon///AnimalShow.png" ,AnimalShow
-https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine104.m3u8
+https://floral-night-e2a4.dookeela.workers.dev/edge/animalshow/chunks.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9My8xMi8yMDI2LCAyOjQ2OjI0IEFNJmhhc2hfdmFsdWU9T2k3WWtTMUZacFVEalpOemJxOGNwdz09JnZhbGlkbWludXRlcz0xJmlkPWM0N2U0YTZkMzk0NTEyZDk5MTE3ZWE0YTdlZTc4OTk0JmNoZWNraXA9dHJ1ZSZzdHJtX2xlbj0xNw==
 
 #EXTINF:-1 tvg-logo="https://cms.dmpcdn.com/livetv/2024/01/16/ca686ee0-b44c-11ee-9f05-591527f02603_webp_original.webp" ,True explore-wild
-https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine105.m3u8
+https://floral-night-e2a4.dookeela.workers.dev/edge/trueexplorewild/chunks.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9My8xMi8yMDI2LCAyOjQ2OjI0IEFNJmhhc2hfdmFsdWU9T2k3WWtTMUZacFVEalpOemJxOGNwdz09JnZhbGlkbWludXRlcz0xJmlkPWM0N2U0YTZkMzk0NTEyZDk5MTE3ZWE0YTdlZTc4OTk0JmNoZWNraXA9dHJ1ZSZzdHJtX2xlbj0xNw==
 
 #EXTINF:-1 tvg-logo="https://cms.dmpcdn.com/livetv/2024/01/16/c9f16a20-b44c-11ee-8e80-c3f417d0d932_webp_original.webp" ,True explore-sci
-https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine106.m3u8
+https://floral-night-e2a4.dookeela.workers.dev/edge/trueexploresci/chunks.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9My8xMi8yMDI2LCAyOjQ2OjI0IEFNJmhhc2hfdmFsdWU9T2k3WWtTMUZacFVEalpOemJxOGNwdz09JnZhbGlkbWludXRlcz0xJmlkPWM0N2U0YTZkMzk0NTEyZDk5MTE3ZWE0YTdlZTc4OTk0JmNoZWNraXA9dHJ1ZSZzdHJtX2xlbj0xNw==
 
 #EXTINF:-1 tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon///Thainess.png" ,Thainess
-https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine107.m3u8
+https://floral-night-e2a4.dookeela.workers.dev/edge/thainess/chunks.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9My8xMi8yMDI2LCAyOjQ2OjI0IEFNJmhhc2hfdmFsdWU9T2k3WWtTMUZacFVEalpOemJxOGNwdz09JnZhbGlkbWludXRlcz0xJmlkPWM0N2U0YTZkMzk0NTEyZDk5MTE3ZWE0YTdlZTc4OTk0JmNoZWNraXA9dHJ1ZSZzdHJtX2xlbj0xNw==
 
 #EXTINF:-1 tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon///SamRujLok.png" ,สำรวจโลก
-https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine108.m3u8
+https://floral-night-e2a4.dookeela.workers.dev/edge/samrujlok/chunks.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9My8xMi8yMDI2LCAyOjQ2OjI0IEFNJmhhc2hfdmFsdWU9T2k3WWtTMUZacFVEalpOemJxOGNwdz09JnZhbGlkbWludXRlcz0xJmlkPWM0N2U0YTZkMzk0NTEyZDk5MTE3ZWE0YTdlZTc4OTk0JmNoZWNraXA9dHJ1ZSZzdHJtX2xlbj0xNw==
 
 #EXTINF:-1 tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/0162.png" , Food Network
-https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine109.m3u8
+https://floral-night-e2a4.dookeela.workers.dev/edge/foodnetwork/chunks.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9My8xMi8yMDI2LCAyOjQ2OjI0IEFNJmhhc2hfdmFsdWU9T2k3WWtTMUZacFVEalpOemJxOGNwdz09JnZhbGlkbWludXRlcz0xJmlkPWM0N2U0YTZkMzk0NTEyZDk5MTE3ZWE0YTdlZTc4OTk0JmNoZWNraXA9dHJ1ZSZzdHJtX2xlbj0xNw==
 
 #EXTINF:-1 tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon//R3_0161.png" ,afn
-https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine110.m3u8
+https://floral-night-e2a4.dookeela.workers.dev/edge/afn/chunks.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9My8xMi8yMDI2LCAyOjQ2OjI0IEFNJmhhc2hfdmFsdWU9T2k3WWtTMUZacFVEalpOemJxOGNwdz09JnZhbGlkbWludXRlcz0xJmlkPWM0N2U0YTZkMzk0NTEyZDk5MTE3ZWE0YTdlZTc4OTk0JmNoZWNraXA9dHJ1ZSZzdHJtX2xlbj0xNw==
 
 #EXTINF:-1 tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//TLC.png" ,TLC
-https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine111.m3u8
+https://floral-night-e2a4.dookeela.workers.dev/edge/tlc/chunks.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9My8xMi8yMDI2LCAyOjQ2OjI0IEFNJmhhc2hfdmFsdWU9T2k3WWtTMUZacFVEalpOemJxOGNwdz09JnZhbGlkbWludXRlcz0xJmlkPWM0N2U0YTZkMzk0NTEyZDk5MTE3ZWE0YTdlZTc4OTk0JmNoZWNraXA9dHJ1ZSZzdHJtX2xlbj0xNw==
 
 #EXTINF:-1 tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon/Boomerang2024.png" ,Boomerang
-https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine601.m3u8
+https://floral-night-e2a4.dookeela.workers.dev/edge/boomerang/chunks.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9My8xMi8yMDI2LCAyOjQ2OjI0IEFNJmhhc2hfdmFsdWU9T2k3WWtTMUZacFVEalpOemJxOGNwdz09JnZhbGlkbWludXRlcz0xJmlkPWM0N2U0YTZkMzk0NTEyZDk5MTE3ZWE0YTdlZTc4OTk0JmNoZWNraXA9dHJ1ZSZzdHJtX2xlbj0xNw==
 
 #EXTINF:-1 tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE///channelicon//0171.png" ,Cartoon Network
-https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine602.m3u8
+https://floral-night-e2a4.dookeela.workers.dev/edge/cartoon-network/chunks.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9My8xMi8yMDI2LCAyOjQ2OjI0IEFNJmhhc2hfdmFsdWU9T2k3WWtTMUZacFVEalpOemJxOGNwdz09JnZhbGlkbWludXRlcz0xJmlkPWM0N2U0YTZkMzk0NTEyZDk5MTE3ZWE0YTdlZTc4OTk0JmNoZWNraXA9dHJ1ZSZzdHJtX2xlbj0xNw==
 
 #EXTINF:-1 tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE/channelicon//Cartoonito.png" ,Cartoonito
-https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine603.m3u8
+https://floral-night-e2a4.dookeela.workers.dev/edge/cartoonito/chunks.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9My8xMi8yMDI2LCAyOjQ2OjI0IEFNJmhhc2hfdmFsdWU9T2k3WWtTMUZacFVEalpOemJxOGNwdz09JnZhbGlkbWludXRlcz0xJmlkPWM0N2U0YTZkMzk0NTEyZDk5MTE3ZWE0YTdlZTc4OTk0JmNoZWNraXA9dHJ1ZSZzdHJtX2xlbj0xNw==
 
 #EXTINF:-1 tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/Nickjr_2024.png" ,Nick Jr. 
-https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine604.m3u8
+https://floral-night-e2a4.dookeela.workers.dev/edge/nickjr/chunks.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9My8xMi8yMDI2LCAyOjQ2OjI0IEFNJmhhc2hfdmFsdWU9T2k3WWtTMUZacFVEalpOemJxOGNwdz09JnZhbGlkbWludXRlcz0xJmlkPWM0N2U0YTZkMzk0NTEyZDk5MTE3ZWE0YTdlZTc4OTk0JmNoZWNraXA9dHJ1ZSZzdHJtX2xlbj0xNw==
 
 #EXTINF:-1 tvg-logo="https://ais-s.ais-vidnt.com/ais/play/origin/LIVE//channelicon/LOGO_Nickelodeon2.png" ,Nickelodeon
-https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine605.m3u8
+https://floral-night-e2a4.dookeela.workers.dev/edge/nickelodeon/chunks.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9My8xMi8yMDI2LCAyOjQ2OjI0IEFNJmhhc2hfdmFsdWU9T2k3WWtTMUZacFVEalpOemJxOGNwdz09JnZhbGlkbWludXRlcz0xJmlkPWM0N2U0YTZkMzk0NTEyZDk5MTE3ZWE0YTdlZTc4OTk0JmNoZWNraXA9dHJ1ZSZzdHJtX2xlbj0xNw==
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/2019_Disney_Channel_logo.svg/320px-2019_Disney_Channel_logo.svg.png",DISNEY CHANNEL
-https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine606.m3u8
+https://floral-night-e2a4.dookeela.workers.dev/edge/disney-channel/chunks.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9My8xMi8yMDI2LCAyOjQ2OjI0IEFNJmhhc2hfdmFsdWU9T2k3WWtTMUZacFVEalpOemJxOGNwdz09JnZhbGlkbWludXRlcz0xJmlkPWM0N2U0YTZkMzk0NTEyZDk5MTE3ZWE0YTdlZTc4OTk0JmNoZWNraXA9dHJ1ZSZzdHJtX2xlbj0xNw==
 
 #EXTINF:-1 tvg-logo="https://i.pinimg.com/originals/7e/24/ca/7e24ca4a5925f9be04da4855702e5099.jpg",DISNEY JUNIOR
-https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine607.m3u8
+https://floral-night-e2a4.dookeela.workers.dev/edge/disney-junior/chunks.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9My8xMi8yMDI2LCAyOjQ2OjI0IEFNJmhhc2hfdmFsdWU9T2k3WWtTMUZacFVEalpOemJxOGNwdz09JnZhbGlkbWludXRlcz0xJmlkPWM0N2U0YTZkMzk0NTEyZDk5MTE3ZWE0YTdlZTc4OTk0JmNoZWNraXA9dHJ1ZSZzdHJtX2xlbj0xNw==
 
 #EXTINF:-1 tvg-logo="https://vectorseek.com/wp-content/uploads/2023/05/Disney-XD-channel-Logo-Vector.jpg",DISNEY XD
-https://raw.githubusercontent.com/jasminrabbit/runnumber/refs/heads/main/Jasmine608.m3u8
+https://floral-night-e2a4.dookeela.workers.dev/edge/disneyxd/chunks.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9My8xMi8yMDI2LCAyOjQ2OjI0IEFNJmhhc2hfdmFsdWU9T2k3WWtTMUZacFVEalpOemJxOGNwdz09JnZhbGlkbWludXRlcz0xJmlkPWM0N2U0YTZkMzk0NTEyZDk5MTE3ZWE0YTdlZTc4OTk0JmNoZWNraXA9dHJ1ZSZzdHJtX2xlbj0xNw==
 
 
