@@ -1,0 +1,1629 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTV Smart Browser - 72966881955146978882</title>
+    <style>
+        body { font-family: -apple-system, sans-serif; background: #121212; color: #e0e0e0; margin: 0; padding: 10px; }
+        h1 { font-size: 20px; text-align: center; color: #00ff88; }
+        .category-item { 
+            background: #1e1e1e; margin: 5px 0; padding: 12px; 
+            border-radius: 8px; display: flex; align-items: center; cursor: pointer;
+            border-left: 4px solid #333; transition: 0.2s;
+        }
+        .category-item:hover { background: #252525; border-left-color: #00ff88; }
+        .cat-id { 
+            background: #00ff88; color: #000; font-weight: bold; 
+            padding: 2px 8px; border-radius: 4px; margin-right: 15px; font-size: 14px;
+        }
+        .cat-name { flex-grow: 1; font-size: 16px; }
+        
+        #stream-list-container { 
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            background: #121212; overflow-y: auto; z-index: 100; padding: 15px; box-sizing: border-box;
+        }
+        .back-btn { 
+            background: #444; color: white; border: none; padding: 10px 20px; 
+            border-radius: 5px; margin-bottom: 20px; cursor: pointer; 
+        }
+        .stream-item { 
+            background: #2a2a2a; padding: 10px; margin-bottom: 5px; border-radius: 5px;
+            display: flex; align-items: center;
+        }
+        .stream-item img { width: 40px; height: 40px; margin-right: 15px; object-fit: contain; }
+    </style>
+</head>
+<body>
+    <h1>📺 Link = http://195.128.27.141:80/play/live.php?mac=00:1A:79:C0:1C:74&stream=ID???&extension=m3u8</h1>
+    <div id="category-list">
+
+        <div class="category-item" onclick="loadStreams('1222', '|DE| ✪ REGIONAL')">
+            <span class="cat-id">1222</span>
+            <span class="cat-name">|DE| ✪ REGIONAL</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('6', '|DE| ✪ ALLGEMEIN')">
+            <span class="cat-id">6</span>
+            <span class="cat-name">|DE| ✪ ALLGEMEIN</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('526', '|DE| ✪ SPORT')">
+            <span class="cat-id">526</span>
+            <span class="cat-name">|DE| ✪ SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('530', '|DE| ✪ NEWS| DOKU')">
+            <span class="cat-id">530</span>
+            <span class="cat-name">|DE| ✪ NEWS| DOKU</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('528', '|DE| ✪ SKY CINEMA')">
+            <span class="cat-id">528</span>
+            <span class="cat-name">|DE| ✪ SKY CINEMA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('828', '|DE| ✪ MUSIC HD')">
+            <span class="cat-id">828</span>
+            <span class="cat-name">|DE| ✪ MUSIC HD</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('527', '|DE| ✪ KINDER')">
+            <span class="cat-id">527</span>
+            <span class="cat-name">|DE| ✪ KINDER</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('498', '|AT| ✪ AUSTRIA')">
+            <span class="cat-id">498</span>
+            <span class="cat-name">|AT| ✪ AUSTRIA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1223', '|DE| ✪ SKY SPORT')">
+            <span class="cat-id">1223</span>
+            <span class="cat-name">|DE| ✪ SKY SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1393', '|DE| ✪ SPORT BUNDESLIGA')">
+            <span class="cat-id">1393</span>
+            <span class="cat-name">|DE| ✪ SPORT BUNDESLIGA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1815', '|DE| ✪ SKY SPORT EVENT')">
+            <span class="cat-id">1815</span>
+            <span class="cat-name">|DE| ✪ SKY SPORT EVENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('529', '|DE| ✪ ENTERTAINMENT')">
+            <span class="cat-id">529</span>
+            <span class="cat-name">|DE| ✪ ENTERTAINMENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('503', '|DE| ✪ BOX OFFICE')">
+            <span class="cat-id">503</span>
+            <span class="cat-name">|DE| ✪ BOX OFFICE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1028', '|SW| ✪ BLUE SPORT')">
+            <span class="cat-id">1028</span>
+            <span class="cat-name">|SW| ✪ BLUE SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2504', '|AT| ✪ SKY SPORT AUSTRIA')">
+            <span class="cat-id">2504</span>
+            <span class="cat-name">|AT| ✪ SKY SPORT AUSTRIA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('562', '|DE| ✪ DAZN SPORT 24/7')">
+            <span class="cat-id">562</span>
+            <span class="cat-name">|DE| ✪ DAZN SPORT 24/7</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1768', '|DE| ✪ EUROSPORT')">
+            <span class="cat-id">1768</span>
+            <span class="cat-name">|DE| ✪ EUROSPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('912', '|DE|  ✪ RTL+ SPORT')">
+            <span class="cat-id">912</span>
+            <span class="cat-name">|DE|  ✪ RTL+ SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1362', '|DE| ✪ BUNDESLIGA  PPV')">
+            <span class="cat-id">1362</span>
+            <span class="cat-name">|DE| ✪ BUNDESLIGA  PPV</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1084', '|DE| ✪ DYN PPV')">
+            <span class="cat-id">1084</span>
+            <span class="cat-name">|DE| ✪ DYN PPV</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1374', '|DE| ✪ UEFA CHAMPIONS LEAGUE')">
+            <span class="cat-id">1374</span>
+            <span class="cat-name">|DE| ✪ UEFA CHAMPIONS LEAGUE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('742', '|DE| ✪ AMAZON PRIME EVENTS HD')">
+            <span class="cat-id">742</span>
+            <span class="cat-name">|DE| ✪ AMAZON PRIME EVENTS HD</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1361', '|DE| ✪ DAZN EVENT')">
+            <span class="cat-id">1361</span>
+            <span class="cat-name">|DE| ✪ DAZN EVENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('753', '|DE| ✪ MYTEAM SPORTS')">
+            <span class="cat-id">753</span>
+            <span class="cat-name">|DE| ✪ MYTEAM SPORTS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1899', '|AT| ✪ SPORT')">
+            <span class="cat-id">1899</span>
+            <span class="cat-name">|AT| ✪ SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1209', '|AT| ✪  DAZN PPV')">
+            <span class="cat-id">1209</span>
+            <span class="cat-name">|AT| ✪  DAZN PPV</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1263', '|DE| ✪ MAGENTA TV')">
+            <span class="cat-id">1263</span>
+            <span class="cat-name">|DE| ✪ MAGENTA TV</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1847', '|AUS| ✪ BLUE SPORT EVENT')">
+            <span class="cat-id">1847</span>
+            <span class="cat-name">|AUS| ✪ BLUE SPORT EVENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('938', '|TR| ✪ ULUSAL')">
+            <span class="cat-id">938</span>
+            <span class="cat-name">|TR| ✪ ULUSAL</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('939', '|TR| ✪ ULUSAL HD')">
+            <span class="cat-id">939</span>
+            <span class="cat-name">|TR| ✪ ULUSAL HD</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('940', '|TR| ✪ ULUSAL FHD')">
+            <span class="cat-id">940</span>
+            <span class="cat-name">|TR| ✪ ULUSAL FHD</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('534', '|TR| ✪ SINEMA')">
+            <span class="cat-id">534</span>
+            <span class="cat-name">|TR| ✪ SINEMA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('636', '|TR| ✪ BOX OFFICE')">
+            <span class="cat-id">636</span>
+            <span class="cat-name">|TR| ✪ BOX OFFICE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('533', '|TR| ✪ BELGESEL')">
+            <span class="cat-id">533</span>
+            <span class="cat-name">|TR| ✪ BELGESEL</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('532', '|TR| ✪ COCUK')">
+            <span class="cat-id">532</span>
+            <span class="cat-name">|TR| ✪ COCUK</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('937', '|TR| ✪ EXTRA')">
+            <span class="cat-id">937</span>
+            <span class="cat-name">|TR| ✪ EXTRA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1907', '|TR| ✪ BIEN SPORTS')">
+            <span class="cat-id">1907</span>
+            <span class="cat-name">|TR| ✪ BIEN SPORTS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('531', '|TR| ✪ SPORT')">
+            <span class="cat-id">531</span>
+            <span class="cat-name">|TR| ✪ SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1908', '|TR| ✪  EXXEN SPORTS')">
+            <span class="cat-id">1908</span>
+            <span class="cat-name">|TR| ✪  EXXEN SPORTS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1909', '|TR| ✪ TABII SPORTS')">
+            <span class="cat-id">1909</span>
+            <span class="cat-name">|TR| ✪ TABII SPORTS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('934', '|TR| ✪ YEREL')">
+            <span class="cat-id">934</span>
+            <span class="cat-name">|TR| ✪ YEREL</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('933', '|TR| ✪ HABER')">
+            <span class="cat-id">933</span>
+            <span class="cat-name">|TR| ✪ HABER</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('932', '|TR| ✪ DIN')">
+            <span class="cat-id">932</span>
+            <span class="cat-name">|TR| ✪ DIN</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('936', '|TR| ✪ RADIO')">
+            <span class="cat-id">936</span>
+            <span class="cat-name">|TR| ✪ RADIO</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('935', '|TR| ✪ MUZIK')">
+            <span class="cat-id">935</span>
+            <span class="cat-name">|TR| ✪ MUZIK</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('520', '|NL| ✪ REGIONAL')">
+            <span class="cat-id">520</span>
+            <span class="cat-name">|NL| ✪ REGIONAL</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('519', '|NL| ✪ ENTERTAINMENT')">
+            <span class="cat-id">519</span>
+            <span class="cat-name">|NL| ✪ ENTERTAINMENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('521', '|NL| ✪ CINEMA')">
+            <span class="cat-id">521</span>
+            <span class="cat-name">|NL| ✪ CINEMA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('524', '|NL| ✪ DOCUMENTARY')">
+            <span class="cat-id">524</span>
+            <span class="cat-name">|NL| ✪ DOCUMENTARY</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('522', '|NL| ✪ KIDS')">
+            <span class="cat-id">522</span>
+            <span class="cat-name">|NL| ✪ KIDS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('523', '|NL| ✪ SPORTS')">
+            <span class="cat-id">523</span>
+            <span class="cat-name">|NL| ✪ SPORTS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2222', '|NL| ✪ GLORY PPV & VIDEOLAND EVENT & BOXING &')">
+            <span class="cat-id">2222</span>
+            <span class="cat-name">|NL| ✪ GLORY PPV & VIDEOLAND EVENT & BOXING &</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('525', '|NL| ✪ MUSIC')">
+            <span class="cat-id">525</span>
+            <span class="cat-name">|NL| ✪ MUSIC</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('506', '|NL| ✪ BOX OFFICE')">
+            <span class="cat-id">506</span>
+            <span class="cat-name">|NL| ✪ BOX OFFICE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1955', '|PPV| ✪ ALL PPV EVENT')">
+            <span class="cat-id">1955</span>
+            <span class="cat-name">|PPV| ✪ ALL PPV EVENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1882', '|NL| ✪ VIDEOLAND')">
+            <span class="cat-id">1882</span>
+            <span class="cat-name">|NL| ✪ VIDEOLAND</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('442', '|UK| ✪ ENTERTAINMENT')">
+            <span class="cat-id">442</span>
+            <span class="cat-name">|UK| ✪ ENTERTAINMENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2240', '|UK| ✪ TIMESHIFT OR +1')">
+            <span class="cat-id">2240</span>
+            <span class="cat-name">|UK| ✪ TIMESHIFT OR +1</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2224', '|UK| ✪ BBC GENERAL')">
+            <span class="cat-id">2224</span>
+            <span class="cat-name">|UK| ✪ BBC GENERAL</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('549', '|UK| ✪ KIDS')">
+            <span class="cat-id">549</span>
+            <span class="cat-name">|UK| ✪ KIDS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2241', '|UK| ✪ NEWS')">
+            <span class="cat-id">2241</span>
+            <span class="cat-name">|UK| ✪ NEWS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('551', '|UK| ✪ CINEMA')">
+            <span class="cat-id">551</span>
+            <span class="cat-name">|UK| ✪ CINEMA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('550', '|UK| ✪  DOCUMENTARY')">
+            <span class="cat-id">550</span>
+            <span class="cat-name">|UK| ✪  DOCUMENTARY</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1709', '|UK| ✪ DAZN EVENT')">
+            <span class="cat-id">1709</span>
+            <span class="cat-name">|UK| ✪ DAZN EVENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('794', '|UK| ✪ HUB SPORTS')">
+            <span class="cat-id">794</span>
+            <span class="cat-name">|UK| ✪ HUB SPORTS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1775', '|UK| ✪ BEIN SPORT')">
+            <span class="cat-id">1775</span>
+            <span class="cat-name">|UK| ✪ BEIN SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('548', '|UK| ✪ SPORTS')">
+            <span class="cat-id">548</span>
+            <span class="cat-name">|UK| ✪ SPORTS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1769', '|UK| ✪ TNT SPORTS EVENT')">
+            <span class="cat-id">1769</span>
+            <span class="cat-name">|UK| ✪ TNT SPORTS EVENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('820', '|UK| ✪ CRICKET LIVE')">
+            <span class="cat-id">820</span>
+            <span class="cat-name">|UK| ✪ CRICKET LIVE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('821', '|UK| ✪ DISCOVERY+')">
+            <span class="cat-id">821</span>
+            <span class="cat-name">|UK| ✪ DISCOVERY+</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1442', '|UK| ✪ MUSIC')">
+            <span class="cat-id">1442</span>
+            <span class="cat-name">|UK| ✪ MUSIC</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('504', '|UK| ✪ BOX OFFICE 24/7')">
+            <span class="cat-id">504</span>
+            <span class="cat-name">|UK| ✪ BOX OFFICE 24/7</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('667', '|UK| ✪ UK SD')">
+            <span class="cat-id">667</span>
+            <span class="cat-name">|UK| ✪ UK SD</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('420', '|UK| ✪ ASIA EU')">
+            <span class="cat-id">420</span>
+            <span class="cat-name">|UK| ✪ ASIA EU</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('789', '|US| ✪ BOX OFFICE 24/7')">
+            <span class="cat-id">789</span>
+            <span class="cat-name">|US| ✪ BOX OFFICE 24/7</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2191', '|UK| ✪ SUPER LEAGUE + EVENT')">
+            <span class="cat-id">2191</span>
+            <span class="cat-name">|UK| ✪ SUPER LEAGUE + EVENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1128', '|UK| ✪ PPV UFC')">
+            <span class="cat-id">1128</span>
+            <span class="cat-name">|UK| ✪ PPV UFC</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1124', '|UK| ✪ PDC BOARD')">
+            <span class="cat-id">1124</span>
+            <span class="cat-name">|UK| ✪ PDC BOARD</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1089', '|UK| ✪ IRELAND')">
+            <span class="cat-id">1089</span>
+            <span class="cat-name">|UK| ✪ IRELAND</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1669', '|UK| ✪ IRELAND SPORT EVENT')">
+            <span class="cat-id">1669</span>
+            <span class="cat-name">|UK| ✪ IRELAND SPORT EVENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1308', '|UK| ✪ LEAGUE ONE')">
+            <span class="cat-id">1308</span>
+            <span class="cat-name">|UK| ✪ LEAGUE ONE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1309', '|UK| ✪ LEAGUE TWO')">
+            <span class="cat-id">1309</span>
+            <span class="cat-name">|UK| ✪ LEAGUE TWO</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1312', '|UK| ✪ SCOTTISH FOOTBALL')">
+            <span class="cat-id">1312</span>
+            <span class="cat-name">|UK| ✪ SCOTTISH FOOTBALL</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1778', '|UK| ✪ SKY SPORT + PPV')">
+            <span class="cat-id">1778</span>
+            <span class="cat-name">|UK| ✪ SKY SPORT + PPV</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1677', '|UK| ✪ UEFA CHAMPIONS LEAGUE')">
+            <span class="cat-id">1677</span>
+            <span class="cat-name">|UK| ✪ UEFA CHAMPIONS LEAGUE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1282', '|NZ| ✪ NEW ZEALAND')">
+            <span class="cat-id">1282</span>
+            <span class="cat-name">|NZ| ✪ NEW ZEALAND</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1464', '|UK| ✪ LIVE EVENT')">
+            <span class="cat-id">1464</span>
+            <span class="cat-name">|UK| ✪ LIVE EVENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1942', '|UK| ✪ OXING EVENT')">
+            <span class="cat-id">1942</span>
+            <span class="cat-name">|UK| ✪ OXING EVENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('587', '|UK| ✪ UK ᵁᴴᴰ/ᴴᴰ')">
+            <span class="cat-id">587</span>
+            <span class="cat-name">|UK| ✪ UK ᵁᴴᴰ/ᴴᴰ</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('850', '|PL| ✪ FILMOWE')">
+            <span class="cat-id">850</span>
+            <span class="cat-name">|PL| ✪ FILMOWE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('164', '|PL| ✪ OGÔLNE')">
+            <span class="cat-id">164</span>
+            <span class="cat-name">|PL| ✪ OGÔLNE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('851', '|PL| ✪ ENTERTAINMENT')">
+            <span class="cat-id">851</span>
+            <span class="cat-name">|PL| ✪ ENTERTAINMENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('854', '|PL| ✪ KULTURA')">
+            <span class="cat-id">854</span>
+            <span class="cat-name">|PL| ✪ KULTURA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('853', '|PL| ✪ SPORTOWE')">
+            <span class="cat-id">853</span>
+            <span class="cat-name">|PL| ✪ SPORTOWE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('852', '|PL| ✪ KIDS')">
+            <span class="cat-id">852</span>
+            <span class="cat-name">|PL| ✪ KIDS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1638', '|PL| ✪ MUSIC')">
+            <span class="cat-id">1638</span>
+            <span class="cat-name">|PL| ✪ MUSIC</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2306', '|PL| ✪ POLSAT EXTRA')">
+            <span class="cat-id">2306</span>
+            <span class="cat-name">|PL| ✪ POLSAT EXTRA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1773', '|PL| ✪ MAX SPORT')">
+            <span class="cat-id">1773</span>
+            <span class="cat-name">|PL| ✪ MAX SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1779', '|PL| ✪ CANAL+ XTRA SPORT')">
+            <span class="cat-id">1779</span>
+            <span class="cat-name">|PL| ✪ CANAL+ XTRA SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1846', '|PL|  ✪ CANAL+ LIVE')">
+            <span class="cat-id">1846</span>
+            <span class="cat-name">|PL|  ✪ CANAL+ LIVE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('163', '|RO| ✪ ROMANIA')">
+            <span class="cat-id">163</span>
+            <span class="cat-name">|RO| ✪ ROMANIA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1119', '|RO| ✪ DOCUMENTAR')">
+            <span class="cat-id">1119</span>
+            <span class="cat-name">|RO| ✪ DOCUMENTAR</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1122', '|RO| ✪ CINEMA')">
+            <span class="cat-id">1122</span>
+            <span class="cat-name">|RO| ✪ CINEMA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1118', '|RO| ✪ MUZICĂ')">
+            <span class="cat-id">1118</span>
+            <span class="cat-name">|RO| ✪ MUZICĂ</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1121', '|RO| ✪ DIVERTISMENT')">
+            <span class="cat-id">1121</span>
+            <span class="cat-name">|RO| ✪ DIVERTISMENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1120', '|RO| ✪ COPII')">
+            <span class="cat-id">1120</span>
+            <span class="cat-name">|RO| ✪ COPII</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1123', '|RO| ✪ SPORTS')">
+            <span class="cat-id">1123</span>
+            <span class="cat-name">|RO| ✪ SPORTS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('502', '|BE| ✪ FRENCH')">
+            <span class="cat-id">502</span>
+            <span class="cat-name">|BE| ✪ FRENCH</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('22', '|BE| ✪ VLAAMS')">
+            <span class="cat-id">22</span>
+            <span class="cat-name">|BE| ✪ VLAAMS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('810', '|BE| ✪ KIDS')">
+            <span class="cat-id">810</span>
+            <span class="cat-name">|BE| ✪ KIDS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2023', '|BE| ✪ DAZN LIVE')">
+            <span class="cat-id">2023</span>
+            <span class="cat-name">|BE| ✪ DAZN LIVE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('637', '|BE| ✪ SPORT')">
+            <span class="cat-id">637</span>
+            <span class="cat-name">|BE| ✪ SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1911', '|BE| ✪ PLAY SPORTS')">
+            <span class="cat-id">1911</span>
+            <span class="cat-name">|BE| ✪ PLAY SPORTS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('662', '|BE| ✪ LUXEMBURG')">
+            <span class="cat-id">662</span>
+            <span class="cat-name">|BE| ✪ LUXEMBURG</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('639', '|BE| ✪ BELGIUM  4K')">
+            <span class="cat-id">639</span>
+            <span class="cat-name">|BE| ✪ BELGIUM  4K</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2322', '|BE| ✪ SERIE A')">
+            <span class="cat-id">2322</span>
+            <span class="cat-name">|BE| ✪ SERIE A</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2271', '|BE| ✪ DAZN EVENT')">
+            <span class="cat-id">2271</span>
+            <span class="cat-name">|BE| ✪ DAZN EVENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2265', '|BE| ✪ DAZN JUPILER PRO LEAGUE')">
+            <span class="cat-id">2265</span>
+            <span class="cat-name">|BE| ✪ DAZN JUPILER PRO LEAGUE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('414', '|FR| ✪ SPORT')">
+            <span class="cat-id">414</span>
+            <span class="cat-name">|FR| ✪ SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('29', '|FR| ✪ TNT HD')">
+            <span class="cat-id">29</span>
+            <span class="cat-name">|FR| ✪ TNT HD</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1174', '|FR| ✪ TNT HEVC')">
+            <span class="cat-id">1174</span>
+            <span class="cat-name">|FR| ✪ TNT HEVC</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1173', '|FR| ✪ TNT SD')">
+            <span class="cat-id">1173</span>
+            <span class="cat-name">|FR| ✪ TNT SD</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1736', '|FR| ✪ RMC CHANNEL')">
+            <span class="cat-id">1736</span>
+            <span class="cat-name">|FR| ✪ RMC CHANNEL</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('416', '|FR| ✪ DECOUVERTE')">
+            <span class="cat-id">416</span>
+            <span class="cat-name">|FR| ✪ DECOUVERTE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1019', '|FR| ✪ INFOS')">
+            <span class="cat-id">1019</span>
+            <span class="cat-name">|FR| ✪ INFOS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('731', '|FR| ✪ TOUTE LES CHAINES  ᵁᴴᴰ/ᴴᴰ')">
+            <span class="cat-id">731</span>
+            <span class="cat-name">|FR| ✪ TOUTE LES CHAINES  ᵁᴴᴰ/ᴴᴰ</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2400', '|FR| ✪ RMC SPORT')">
+            <span class="cat-id">2400</span>
+            <span class="cat-name">|FR| ✪ RMC SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2375', '|FR| ✪ MY TF1+')">
+            <span class="cat-id">2375</span>
+            <span class="cat-name">|FR| ✪ MY TF1+</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('509', '|FR| ✪ BOX OFFICE')">
+            <span class="cat-id">509</span>
+            <span class="cat-name">|FR| ✪ BOX OFFICE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('415', '|FR| ✪ CINEMA')">
+            <span class="cat-id">415</span>
+            <span class="cat-name">|FR| ✪ CINEMA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2433', '|FR| ✪ CINE POP')">
+            <span class="cat-id">2433</span>
+            <span class="cat-name">|FR| ✪ CINE POP</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('453', '|FR| ✪ NETFLIX | CANALPLAY')">
+            <span class="cat-id">453</span>
+            <span class="cat-name">|FR| ✪ NETFLIX | CANALPLAY</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('692', '|FR| ✪ NUMERICABLE')">
+            <span class="cat-id">692</span>
+            <span class="cat-name">|FR| ✪ NUMERICABLE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('384', '|FR| ✪ JEUNESSE')">
+            <span class="cat-id">384</span>
+            <span class="cat-name">|FR| ✪ JEUNESSE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2266', '|FR| ✪ LIGUE PLUS LIVE')">
+            <span class="cat-id">2266</span>
+            <span class="cat-name">|FR| ✪ LIGUE PLUS LIVE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1777', '|FR| ✪ LIGUE 1 ( B )')">
+            <span class="cat-id">1777</span>
+            <span class="cat-name">|FR| ✪ LIGUE 1 ( B )</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2026', '|FR| ✪ CANAL+ SPORT')">
+            <span class="cat-id">2026</span>
+            <span class="cat-name">|FR| ✪ CANAL+ SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('913', '|FR| ✪ CANAL+ LIVE')">
+            <span class="cat-id">913</span>
+            <span class="cat-name">|FR| ✪ CANAL+ LIVE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1738', '|FR| ✪ LEQUIPE LIVE')">
+            <span class="cat-id">1738</span>
+            <span class="cat-name">|FR| ✪ LEQUIPE LIVE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('914', '|FR| ✪ SKWEEK EVENMENT')">
+            <span class="cat-id">914</span>
+            <span class="cat-name">|FR| ✪ SKWEEK EVENMENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1180', '|FR| ✪ FANSEAT EVENMENT')">
+            <span class="cat-id">1180</span>
+            <span class="cat-name">|FR| ✪ FANSEAT EVENMENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1682', '|FR| ✪ FFF TV')">
+            <span class="cat-id">1682</span>
+            <span class="cat-name">|FR| ✪ FFF TV</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2025', '|FR| ✪ BEIN SPORT')">
+            <span class="cat-id">2025</span>
+            <span class="cat-name">|FR| ✪ BEIN SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1760', '|FR| ✪ EUROSPORT 360')">
+            <span class="cat-id">1760</span>
+            <span class="cat-name">|FR| ✪ EUROSPORT 360</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1759', '|FR| ✪ EUROSPORT')">
+            <span class="cat-id">1759</span>
+            <span class="cat-name">|FR| ✪ EUROSPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('417', '|FR| ✪ MUSIQUE')">
+            <span class="cat-id">417</span>
+            <span class="cat-name">|FR| ✪ MUSIQUE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1177', '|FR| ✪ DELAY')">
+            <span class="cat-id">1177</span>
+            <span class="cat-name">|FR| ✪ DELAY</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1749', '|FR| ✪ RÉUNION')">
+            <span class="cat-id">1749</span>
+            <span class="cat-name">|FR| ✪ RÉUNION</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1840', '|FR| ✪ MYSPORTS')">
+            <span class="cat-id">1840</span>
+            <span class="cat-name">|FR| ✪ MYSPORTS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2377', '|FR| NBA PRIME')">
+            <span class="cat-id">2377</span>
+            <span class="cat-name">|FR| NBA PRIME</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2410', '|FR| ✪ COPA DEL REY')">
+            <span class="cat-id">2410</span>
+            <span class="cat-name">|FR| ✪ COPA DEL REY</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('902', '|FR| ✪ DAZN EVENT')">
+            <span class="cat-id">902</span>
+            <span class="cat-name">|FR| ✪ DAZN EVENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2355', '|FR| ✪ DAZN SUPER LEAGUE BASKETBALL')">
+            <span class="cat-id">2355</span>
+            <span class="cat-name">|FR| ✪ DAZN SUPER LEAGUE BASKETBALL</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2354', '|FR| ✪ DAZN LIGUE+')">
+            <span class="cat-id">2354</span>
+            <span class="cat-name">|FR| ✪ DAZN LIGUE+</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2353', '|FR| ✪ DAZN SERIE A')">
+            <span class="cat-id">2353</span>
+            <span class="cat-name">|FR| ✪ DAZN SERIE A</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('514', '|ES| ✪ TDT/AUTONOMICOS')">
+            <span class="cat-id">514</span>
+            <span class="cat-name">|ES| ✪ TDT/AUTONOMICOS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1325', '|ES| ✪ SPAIN ᵁᴴᴰ/ᴴᴰ')">
+            <span class="cat-id">1325</span>
+            <span class="cat-name">|ES| ✪ SPAIN ᵁᴴᴰ/ᴴᴰ</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1631', '|ES| ✪ MUSIC')">
+            <span class="cat-id">1631</span>
+            <span class="cat-name">|ES| ✪ MUSIC</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('511', '|ES| ✪ DOCUMENTALES')">
+            <span class="cat-id">511</span>
+            <span class="cat-name">|ES| ✪ DOCUMENTALES</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('7', '|ES| ✪ ENTERTENIMIENTO')">
+            <span class="cat-id">7</span>
+            <span class="cat-name">|ES| ✪ ENTERTENIMIENTO</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('513', '|ES| ✪ CINEMA')">
+            <span class="cat-id">513</span>
+            <span class="cat-name">|ES| ✪ CINEMA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('552', '|ES| ✪ BOX OFFICE')">
+            <span class="cat-id">552</span>
+            <span class="cat-name">|ES| ✪ BOX OFFICE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2001', '|ES| ✪ BBC')">
+            <span class="cat-id">2001</span>
+            <span class="cat-name">|ES| ✪ BBC</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('510', '|ES| ✪ NIÑOS')">
+            <span class="cat-id">510</span>
+            <span class="cat-name">|ES| ✪ NIÑOS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('558', '|ES| ✪ SPAINS 4K')">
+            <span class="cat-id">558</span>
+            <span class="cat-name">|ES| ✪ SPAINS 4K</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1758', '|ES| ✪ FORMULA 1')">
+            <span class="cat-id">1758</span>
+            <span class="cat-name">|ES| ✪ FORMULA 1</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1396', '|ES| ✪ LALIGA')">
+            <span class="cat-id">1396</span>
+            <span class="cat-name">|ES| ✪ LALIGA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1999', '|ES| ✪ LALIGA ORANGE')">
+            <span class="cat-id">1999</span>
+            <span class="cat-name">|ES| ✪ LALIGA ORANGE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2342', '|ES| ✪ DAZN ACB')">
+            <span class="cat-id">2342</span>
+            <span class="cat-name">|ES| ✪ DAZN ACB</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1358', '|ES| ✪ MOTO GP')">
+            <span class="cat-id">1358</span>
+            <span class="cat-name">|ES| ✪ MOTO GP</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2130', '|ES| ✪ UEFA CHAMPIONS LEAGUE')">
+            <span class="cat-id">2130</span>
+            <span class="cat-name">|ES| ✪ UEFA CHAMPIONS LEAGUE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2020', '|ES| ✪ COPA DEL REY')">
+            <span class="cat-id">2020</span>
+            <span class="cat-name">|ES| ✪ COPA DEL REY</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1974', '|ES| ✪ LALIGA HYPERMOTION')">
+            <span class="cat-id">1974</span>
+            <span class="cat-name">|ES| ✪ LALIGA HYPERMOTION</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1395', '|ES| ✪ M LCAMPEON')">
+            <span class="cat-id">1395</span>
+            <span class="cat-name">|ES| ✪ M LCAMPEON</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1998', '|ES| ✪ M LCAMPEON Orange')">
+            <span class="cat-id">1998</span>
+            <span class="cat-name">|ES| ✪ M LCAMPEON Orange</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('512', '|ES| ✪ DEPORTES')">
+            <span class="cat-id">512</span>
+            <span class="cat-name">|ES| ✪ DEPORTES</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('911', '|ES| ✪ GOL MUNDIAL SOLO EVENTOS')">
+            <span class="cat-id">911</span>
+            <span class="cat-name">|ES| ✪ GOL MUNDIAL SOLO EVENTOS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1398', '|ES| ✪ NBA')">
+            <span class="cat-id">1398</span>
+            <span class="cat-name">|ES| ✪ NBA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1194', '|ES| ✪ DAZN FEME SOLO EVENTOS')">
+            <span class="cat-id">1194</span>
+            <span class="cat-name">|ES| ✪ DAZN FEME SOLO EVENTOS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1922', '|ES| ✪ LALIGA+ PPV')">
+            <span class="cat-id">1922</span>
+            <span class="cat-name">|ES| ✪ LALIGA+ PPV</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2314', '|ES| ✪ RFEF SOLO EVENTOS')">
+            <span class="cat-id">2314</span>
+            <span class="cat-name">|ES| ✪ RFEF SOLO EVENTOS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1245', '|ES| ✪ 2RFEF SOLO EVENTOS')">
+            <span class="cat-id">1245</span>
+            <span class="cat-name">|ES| ✪ 2RFEF SOLO EVENTOS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2136', '|ES| ✪ BEIN SPORT')">
+            <span class="cat-id">2136</span>
+            <span class="cat-name">|ES| ✪ BEIN SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1788', '|ES| ✪ BUNDESLIGA  PPV')">
+            <span class="cat-id">1788</span>
+            <span class="cat-name">|ES| ✪ BUNDESLIGA  PPV</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1328', '|ES| ✪ PREMIER LEAGUE PPV')">
+            <span class="cat-id">1328</span>
+            <span class="cat-name">|ES| ✪ PREMIER LEAGUE PPV</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1789', '|ES| ✪ DAZN SERIE A')">
+            <span class="cat-id">1789</span>
+            <span class="cat-name">|ES| ✪ DAZN SERIE A</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1327', '|ES| ✪ LALIGA PPV')">
+            <span class="cat-id">1327</span>
+            <span class="cat-name">|ES| ✪ LALIGA PPV</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1227', '|ES| ✪ VIX|TUDN')">
+            <span class="cat-id">1227</span>
+            <span class="cat-name">|ES| ✪ VIX|TUDN</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1799', '|ES| ✪ AUTONOMICOS')">
+            <span class="cat-id">1799</span>
+            <span class="cat-name">|ES| ✪ AUTONOMICOS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1997', '|ES| ✪ DAZN EVENT')">
+            <span class="cat-id">1997</span>
+            <span class="cat-name">|ES| ✪ DAZN EVENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1886', '|ES| ✪ TIVIFY GOLD')">
+            <span class="cat-id">1886</span>
+            <span class="cat-name">|ES| ✪ TIVIFY GOLD</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1757', '|ES| ✪ EUROSPORT')">
+            <span class="cat-id">1757</span>
+            <span class="cat-name">|ES| ✪ EUROSPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1732', '|ES| ✪ ROLAND-GARROS')">
+            <span class="cat-id">1732</span>
+            <span class="cat-name">|ES| ✪ ROLAND-GARROS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2396', '|ES| ✪ RAKUTEN TV')">
+            <span class="cat-id">2396</span>
+            <span class="cat-name">|ES| ✪ RAKUTEN TV</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('23', '|IT| ✪ GENERALE')">
+            <span class="cat-id">23</span>
+            <span class="cat-name">|IT| ✪ GENERALE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('541', '|IT| ✪ DOCUMENTARIO')">
+            <span class="cat-id">541</span>
+            <span class="cat-name">|IT| ✪ DOCUMENTARIO</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1633', '|IT| ✪ MUSIC')">
+            <span class="cat-id">1633</span>
+            <span class="cat-name">|IT| ✪ MUSIC</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1589', '|IT| ✪  REGIONALI')">
+            <span class="cat-id">1589</span>
+            <span class="cat-name">|IT| ✪  REGIONALI</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('542', '|IT| ✪ CINEMA')">
+            <span class="cat-id">542</span>
+            <span class="cat-name">|IT| ✪ CINEMA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2124', '|IT| ✪ MIGLIORI ATTORI')">
+            <span class="cat-id">2124</span>
+            <span class="cat-name">|IT| ✪ MIGLIORI ATTORI</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2297', '|IT| ✪ PRIMAFILA')">
+            <span class="cat-id">2297</span>
+            <span class="cat-name">|IT| ✪ PRIMAFILA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('640', '|IT| ✪ NETFLIX')">
+            <span class="cat-id">640</span>
+            <span class="cat-name">|IT| ✪ NETFLIX</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('611', '|IT| ✪ PRIME VIDEO')">
+            <span class="cat-id">611</span>
+            <span class="cat-name">|IT| ✪ PRIME VIDEO</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1612', '|IT| ✪ UEFA CHAMPIONS LEAGUE PPV')">
+            <span class="cat-id">1612</span>
+            <span class="cat-name">|IT| ✪ UEFA CHAMPIONS LEAGUE PPV</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('536', '|IT| ✪ SPORT')">
+            <span class="cat-id">536</span>
+            <span class="cat-name">|IT| ✪ SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1730', '|IT| ✪ ROLAND GARROS')">
+            <span class="cat-id">1730</span>
+            <span class="cat-name">|IT| ✪ ROLAND GARROS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1359', '|IT| ✪ DAZN SERIE BKT')">
+            <span class="cat-id">1359</span>
+            <span class="cat-name">|IT| ✪ DAZN SERIE BKT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('561', '|IT| ✪ DAZN SPORT')">
+            <span class="cat-id">561</span>
+            <span class="cat-name">|IT| ✪ DAZN SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1397', '|IT| ✪ SKY CALCIO')">
+            <span class="cat-id">1397</span>
+            <span class="cat-name">|IT| ✪ SKY CALCIO</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2296', '|IT| ✪ MYSPORTS')">
+            <span class="cat-id">2296</span>
+            <span class="cat-name">|IT| ✪ MYSPORTS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('717', '|US| ✪ WWE')">
+            <span class="cat-id">717</span>
+            <span class="cat-name">|US| ✪ WWE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('793', '|IT| ✪ ELEVEN SPORT')">
+            <span class="cat-id">793</span>
+            <span class="cat-name">|IT| ✪ ELEVEN SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('537', '|IT| ✪ SPORTS EVENT')">
+            <span class="cat-id">537</span>
+            <span class="cat-name">|IT| ✪ SPORTS EVENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1326', '|IT| ✪ DAZN SERIE A')">
+            <span class="cat-id">1326</span>
+            <span class="cat-name">|IT| ✪ DAZN SERIE A</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1360', '|IT|✪  DAZN EVENT')">
+            <span class="cat-id">1360</span>
+            <span class="cat-name">|IT|✪  DAZN EVENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('540', '|IT| ✪ BAMBINI')">
+            <span class="cat-id">540</span>
+            <span class="cat-name">|IT| ✪ BAMBINI</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1170', '|IT| ✪ LEGA BASKET FEMMINILE PPV')">
+            <span class="cat-id">1170</span>
+            <span class="cat-name">|IT| ✪ LEGA BASKET FEMMINILE PPV</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('622', '|PT| ✪ PORTUGAL ᵁᴴᴰ/ᴴᴰ')">
+            <span class="cat-id">622</span>
+            <span class="cat-name">|PT| ✪ PORTUGAL ᵁᴴᴰ/ᴴᴰ</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('547', '|PT| ✪ DOCUMENTARIO')">
+            <span class="cat-id">547</span>
+            <span class="cat-name">|PT| ✪ DOCUMENTARIO</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('47', '|PT| ✪ EMGERAL')">
+            <span class="cat-id">47</span>
+            <span class="cat-name">|PT| ✪ EMGERAL</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('544', '|PT| ✪ CINEMA')">
+            <span class="cat-id">544</span>
+            <span class="cat-name">|PT| ✪ CINEMA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('545', '|PT| ✪ ESPORTES')">
+            <span class="cat-id">545</span>
+            <span class="cat-name">|PT| ✪ ESPORTES</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1634', '|PT| ✪ MUSIC')">
+            <span class="cat-id">1634</span>
+            <span class="cat-name">|PT| ✪ MUSIC</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('546', '|PT| ✪ CRIANCAS')">
+            <span class="cat-id">546</span>
+            <span class="cat-name">|PT| ✪ CRIANCAS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('507', '|PT| ✪ BOX OFFICE')">
+            <span class="cat-id">507</span>
+            <span class="cat-name">|PT| ✪ BOX OFFICE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('158', '|SE| ✪ SWEDEN  ᵁᴴᴰ/ᴴᴰ')">
+            <span class="cat-id">158</span>
+            <span class="cat-name">|SE| ✪ SWEDEN  ᵁᴴᴰ/ᴴᴰ</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1793', '|SE| ✪ MAX PPV')">
+            <span class="cat-id">1793</span>
+            <span class="cat-name">|SE| ✪ MAX PPV</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1809', '|NO| ✪ DIREKTESPORT PPV')">
+            <span class="cat-id">1809</span>
+            <span class="cat-name">|NO| ✪ DIREKTESPORT PPV</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('159', '|NO| ✪ NORWAY  ᵁᴴᴰ/ᴴᴰ')">
+            <span class="cat-id">159</span>
+            <span class="cat-name">|NO| ✪ NORWAY  ᵁᴴᴰ/ᴴᴰ</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2425', '|NO| ✪ SPORTS ᵁᴴᴰ/ᴴᴰ')">
+            <span class="cat-id">2425</span>
+            <span class="cat-name">|NO| ✪ SPORTS ᵁᴴᴰ/ᴴᴰ</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2482', '|NO| ✪ PREMIER LEAGUE ᵁᴴᴰ/ᴴᴰ')">
+            <span class="cat-id">2482</span>
+            <span class="cat-name">|NO| ✪ PREMIER LEAGUE ᵁᴴᴰ/ᴴᴰ</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('156', '|FI| ✪ FINLAND ᵁᴴᴰ/ᴴᴰ')">
+            <span class="cat-id">156</span>
+            <span class="cat-name">|FI| ✪ FINLAND ᵁᴴᴰ/ᴴᴰ</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('142', '|AL|  ✪ KOSOVO')">
+            <span class="cat-id">142</span>
+            <span class="cat-name">|AL|  ✪ KOSOVO</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('893', '|AL|  ✪ FEMIJE')">
+            <span class="cat-id">893</span>
+            <span class="cat-name">|AL|  ✪ FEMIJE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1540', '|AL|  ✪  MUSIC')">
+            <span class="cat-id">1540</span>
+            <span class="cat-name">|AL|  ✪  MUSIC</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('890', '|AL|  ✪ SPORTI')">
+            <span class="cat-id">890</span>
+            <span class="cat-name">|AL|  ✪ SPORTI</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('894', '|AL|  ✪ ARGETIM')">
+            <span class="cat-id">894</span>
+            <span class="cat-name">|AL|  ✪ ARGETIM</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('892', '|AL|  ✪ DOKUMENTAR')">
+            <span class="cat-id">892</span>
+            <span class="cat-name">|AL|  ✪ DOKUMENTAR</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('891', '|AL|  ✪ KINEMA')">
+            <span class="cat-id">891</span>
+            <span class="cat-name">|AL|  ✪ KINEMA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('641', '|AL|  ✪ BOX OFFICE')">
+            <span class="cat-id">641</span>
+            <span class="cat-name">|AL|  ✪ BOX OFFICE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('77', '|RU|  ✪ RUSSIAN')">
+            <span class="cat-id">77</span>
+            <span class="cat-name">|RU|  ✪ RUSSIAN</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1146', '|ISL|  ✪ SPORT')">
+            <span class="cat-id">1146</span>
+            <span class="cat-name">|ISL|  ✪ SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('161', '|ISL|  ✪ ENTERTEMNTS')">
+            <span class="cat-id">161</span>
+            <span class="cat-name">|ISL|  ✪ ENTERTEMNTS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1147', '|ISL| ✪ DOCUMENTARY')">
+            <span class="cat-id">1147</span>
+            <span class="cat-name">|ISL| ✪ DOCUMENTARY</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1149', '|ISL| ✪ KIDS')">
+            <span class="cat-id">1149</span>
+            <span class="cat-name">|ISL| ✪ KIDS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1148', '|ISL| CINEMA')">
+            <span class="cat-id">1148</span>
+            <span class="cat-name">|ISL| CINEMA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('361', '|BG|  ✪ BULGARIA')">
+            <span class="cat-id">361</span>
+            <span class="cat-name">|BG|  ✪ BULGARIA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1161', '|BG|  ✪ RAZVLECHENIYA')">
+            <span class="cat-id">1161</span>
+            <span class="cat-name">|BG|  ✪ RAZVLECHENIYA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1164', '|BG|  ✪ KINO')">
+            <span class="cat-id">1164</span>
+            <span class="cat-name">|BG|  ✪ KINO</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1163', '|BG|  ✪ DETSA')">
+            <span class="cat-id">1163</span>
+            <span class="cat-name">|BG|  ✪ DETSA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1159', '|BG|  ✪ SPORTS')">
+            <span class="cat-id">1159</span>
+            <span class="cat-name">|BG|  ✪ SPORTS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1160', '|BG|  ✪ DOKU')">
+            <span class="cat-id">1160</span>
+            <span class="cat-name">|BG|  ✪ DOKU</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1162', '|BG|  ✪ MUZIKA')">
+            <span class="cat-id">1162</span>
+            <span class="cat-name">|BG|  ✪ MUZIKA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('353', '|HU| ✪ HUNGARY')">
+            <span class="cat-id">353</span>
+            <span class="cat-name">|HU| ✪ HUNGARY</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('677', '|LT| ✪ LITHUANIA')">
+            <span class="cat-id">677</span>
+            <span class="cat-name">|LT| ✪ LITHUANIA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('28', '|SW| ✪ SWITZERLAND')">
+            <span class="cat-id">28</span>
+            <span class="cat-name">|SW| ✪ SWITZERLAND</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('157', '|DK| ✪ DENMARK  ᵁᴴᴰ/ᴴᴰ')">
+            <span class="cat-id">157</span>
+            <span class="cat-name">|DK| ✪ DENMARK  ᵁᴴᴰ/ᴴᴰ</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('630', '|MA|  ✪ MALTA')">
+            <span class="cat-id">630</span>
+            <span class="cat-name">|MA|  ✪ MALTA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('78', '|GR| ✪ ΕΛΛΑΔΑ')">
+            <span class="cat-id">78</span>
+            <span class="cat-name">|GR| ✪ ΕΛΛΑΔΑ</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('869', '|GR|  ✪ ΨΥΧΑΓΩΓΙΑ')">
+            <span class="cat-id">869</span>
+            <span class="cat-name">|GR|  ✪ ΨΥΧΑΓΩΓΙΑ</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('867', '|GR|  ✪ ΠΑΙΔΙΚΑ')">
+            <span class="cat-id">867</span>
+            <span class="cat-name">|GR|  ✪ ΠΑΙΔΙΚΑ</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('866', '|GR| ✪ ΚΙΝΗΜΑΤΟΓΡΑΦΟΣ')">
+            <span class="cat-id">866</span>
+            <span class="cat-name">|GR| ✪ ΚΙΝΗΜΑΤΟΓΡΑΦΟΣ</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('868', '|GR| ✪ ΨΥΧΑΓΩΓΙΑ')">
+            <span class="cat-id">868</span>
+            <span class="cat-name">|GR| ✪ ΨΥΧΑΓΩΓΙΑ</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1639', '|GR| ✪ ΜΟΥΣΙΚΗ')">
+            <span class="cat-id">1639</span>
+            <span class="cat-name">|GR| ✪ ΜΟΥΣΙΚΗ</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2091', '|GR| ✪ NOVA SPORT')">
+            <span class="cat-id">2091</span>
+            <span class="cat-name">|GR| ✪ NOVA SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2092', '|GR| ✪ COSMOTE SPORT')">
+            <span class="cat-id">2092</span>
+            <span class="cat-name">|GR| ✪ COSMOTE SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('865', '|GR| ✪ ΑΘΛΗΤΙΚΑ')">
+            <span class="cat-id">865</span>
+            <span class="cat-name">|GR| ✪ ΑΘΛΗΤΙΚΑ</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2093', '|GR| ✪ CYTAVISION SPORTS')">
+            <span class="cat-id">2093</span>
+            <span class="cat-name">|GR| ✪ CYTAVISION SPORTS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('849', '|CY| ✪ CYPRUS')">
+            <span class="cat-id">849</span>
+            <span class="cat-name">|CY| ✪ CYPRUS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1102', '|LV| ✪ LATVIA')">
+            <span class="cat-id">1102</span>
+            <span class="cat-name">|LV| ✪ LATVIA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1103', '|EST| ✪  ESTONIA')">
+            <span class="cat-id">1103</span>
+            <span class="cat-name">|EST| ✪  ESTONIA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('287', '|IC| ✪ ICELAND')">
+            <span class="cat-id">287</span>
+            <span class="cat-name">|IC| ✪ ICELAND</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1957', '|IC| ✪ SPORTS')">
+            <span class="cat-id">1957</span>
+            <span class="cat-name">|IC| ✪ SPORTS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1136', '|SLO| ✪ SLOVAKIA & Czechia')">
+            <span class="cat-id">1136</span>
+            <span class="cat-name">|SLO| ✪ SLOVAKIA & Czechia</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('473', '|CZ| ✪ CZECH')">
+            <span class="cat-id">473</span>
+            <span class="cat-name">|CZ| ✪ CZECH</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1765', '|CZ| ✪ SPORT')">
+            <span class="cat-id">1765</span>
+            <span class="cat-name">|CZ| ✪ SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('2264', '|CZ| ✪  CANAL+ SPORT')">
+            <span class="cat-id">2264</span>
+            <span class="cat-name">|CZ| ✪  CANAL+ SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('577', '|UKR|  ✪ UKRAINE')">
+            <span class="cat-id">577</span>
+            <span class="cat-name">|UKR|  ✪ UKRAINE</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('716', '|EX|  ✪ GEORGIA')">
+            <span class="cat-id">716</span>
+            <span class="cat-name">|EX|  ✪ GEORGIA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('818', '|FR| ✪ CARIBBEAN')">
+            <span class="cat-id">818</span>
+            <span class="cat-name">|FR| ✪ CARIBBEAN</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('79', '|CA| ✪ ENGLISH CH')">
+            <span class="cat-id">79</span>
+            <span class="cat-name">|CA| ✪ ENGLISH CH</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1020', '|CA| ✪ LOCALS CH')">
+            <span class="cat-id">1020</span>
+            <span class="cat-name">|CA| ✪ LOCALS CH</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('755', '|CA| ✪ SPORT')">
+            <span class="cat-id">755</span>
+            <span class="cat-name">|CA| ✪ SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1145', '|CA| ✪ QUEBEC')">
+            <span class="cat-id">1145</span>
+            <span class="cat-name">|CA| ✪ QUEBEC</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('919', '|CA| ✪ SUPER SPORTS')">
+            <span class="cat-id">919</span>
+            <span class="cat-name">|CA| ✪ SUPER SPORTS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('918', '|CA| ✪ SPORTSNET PPV')">
+            <span class="cat-id">918</span>
+            <span class="cat-name">|CA| ✪ SPORTSNET PPV</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1085', '|CA| ✪ CANADA SD')">
+            <span class="cat-id">1085</span>
+            <span class="cat-name">|CA| ✪ CANADA SD</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1140', '|CA| ✪ QUEBEC KIDS')">
+            <span class="cat-id">1140</span>
+            <span class="cat-name">|CA| ✪ QUEBEC KIDS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1137', '|CA| ✪ QUEBEC SPORT')">
+            <span class="cat-id">1137</span>
+            <span class="cat-name">|CA| ✪ QUEBEC SPORT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1138', '|CA| ✪ QUEBEC DOC')">
+            <span class="cat-id">1138</span>
+            <span class="cat-name">|CA| ✪ QUEBEC DOC</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1139', '|CA| ✪ QUEBEC ENTERTAINMENT')">
+            <span class="cat-id">1139</span>
+            <span class="cat-name">|CA| ✪ QUEBEC ENTERTAINMENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1142', '|CA| ✪ QUEBEC MUSIC')">
+            <span class="cat-id">1142</span>
+            <span class="cat-name">|CA| ✪ QUEBEC MUSIC</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1143', '|CA| ✪ QUEBEC CINEMA')">
+            <span class="cat-id">1143</span>
+            <span class="cat-name">|CA| ✪ QUEBEC CINEMA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('452', '|AM| ✪ ARMENIA')">
+            <span class="cat-id">452</span>
+            <span class="cat-name">|AM| ✪ ARMENIA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('396', '|AU| ✪ AUSTRALIA')">
+            <span class="cat-id">396</span>
+            <span class="cat-name">|AU| ✪ AUSTRALIA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1169', '|AU| ✪ STANEVENT')">
+            <span class="cat-id">1169</span>
+            <span class="cat-name">|AU| ✪ STANEVENT</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('922', '|AU| ✪ OPTUS')">
+            <span class="cat-id">922</span>
+            <span class="cat-name">|AU| ✪ OPTUS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1206', '|AU| ✪ ESPN PLAY')">
+            <span class="cat-id">1206</span>
+            <span class="cat-name">|AU| ✪ ESPN PLAY</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('362', '|EX|  ✪ EX-YU ENTERTEMNTS')">
+            <span class="cat-id">362</span>
+            <span class="cat-name">|EX|  ✪ EX-YU ENTERTEMNTS</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('1644', '|EX|  ✪ MUSIC')">
+            <span class="cat-id">1644</span>
+            <span class="cat-name">|EX|  ✪ MUSIC</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('369', '|EX|  ✪ MONTENEGRO')">
+            <span class="cat-id">369</span>
+            <span class="cat-name">|EX|  ✪ MONTENEGRO</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('166', '|EX|  ✪ CROATIA')">
+            <span class="cat-id">166</span>
+            <span class="cat-name">|EX|  ✪ CROATIA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('390', '|EX|  ✪ SLOVENIA')">
+            <span class="cat-id">390</span>
+            <span class="cat-name">|EX|  ✪ SLOVENIA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('421', '|EX|  ✪ MACEDONIA')">
+            <span class="cat-id">421</span>
+            <span class="cat-name">|EX|  ✪ MACEDONIA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('368', '|EX|  ✪ SERBIA')">
+            <span class="cat-id">368</span>
+            <span class="cat-name">|EX|  ✪ SERBIA</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('370', '|EX|  ✪ BOSNA HERSEK')">
+            <span class="cat-id">370</span>
+            <span class="cat-name">|EX|  ✪ BOSNA HERSEK</span>
+        </div>
+    
+        <div class="category-item" onclick="loadStreams('691', '|EX|  ✪  SPORT')">
+            <span class="cat-id">691</span>
+            <span class="cat-name">|EX|  ✪  SPORT</span>
+        </div>
+    
+    </div>
+
+    <div id="stream-list-container">
+        <button class="back-btn" onclick="closeStreams()">⬅ Back</button>
+        <h2 id="current-cat-name" style="color:#00ff88"></h2>
+        <div id="streams-content">กำลังโหลด...</div>
+    </div>
+
+    <script>
+        const baseUrl = "http://195.128.27.141:80/player_api.php";
+        const user = "72966881955146978882";
+        const pass = "dv9k5zw5wnpfymhziq63";
+
+        async function loadStreams(catId, catName) {
+            const container = document.getElementById('stream-list-container');
+            const content = document.getElementById('streams-content');
+            document.getElementById('current-cat-name').innerText = catName;
+            
+            container.style.display = 'block';
+            content.innerHTML = 'กำลังโหลดช่องรายการ...';
+
+            try {
+                const response = await fetch(`${baseUrl}?username=${user}&password=${pass}&action=get_live_streams&category_id=${catId}`);
+                const streams = await response.json();
+                
+                let html = '';
+                if (!streams || streams.length === 0) {
+                    html = '<p>ไม่พบช่องในหมวดหมู่นี้</p>';
+                } else {
+                    streams.forEach(s => {
+                        const img = s.stream_icon ? `<img src="${s.stream_icon}" onerror="this.src='https://via.placeholder.com/40?text=TV'">` : '';
+                        html += `
+                            <div class="stream-item">
+                                ${img}
+                                <div>
+                                    <div style="font-weight:bold">${s.name}</div>
+                                    <div style="font-size:12px; color:#888">ID: ${s.stream_id}</div>
+                                </div>
+                            </div>`;
+                    });
+                }
+                content.innerHTML = html;
+            } catch (err) {
+                content.innerHTML = 'เกิดข้อผิดพลาดในการโหลดข้อมูลช่อง';
+            }
+        }
+
+        function closeStreams() {
+            document.getElementById('stream-list-container').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
